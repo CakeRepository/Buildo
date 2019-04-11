@@ -85,6 +85,7 @@
             this.firewallButton.TabIndex = 2;
             this.firewallButton.Text = "Firewall Off";
             this.firewallButton.UseVisualStyleBackColor = true;
+            this.firewallButton.Click += new System.EventHandler(this.firewallButton_Click);
             // 
             // UACOffButton
             // 
@@ -95,6 +96,7 @@
             this.UACOffButton.TabIndex = 3;
             this.UACOffButton.Text = "UAC Off";
             this.UACOffButton.UseVisualStyleBackColor = true;
+            this.UACOffButton.Click += new System.EventHandler(this.UACOffButton_Click);
             // 
             // AboutButton
             // 

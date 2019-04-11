@@ -17,33 +17,41 @@ namespace Buildo
         public Form1()
         {
             InitializeComponent();
-            initUI();
         }
 
-        private void initUI()
+        #region Methods
+        private void Rtb_LinkClicked(object sender, LinkClickedEventArgs e)
         {
-            
+            System.Diagnostics.Process.Start(e.LinkText);
         }
 
-        private void powerSettingsButton_Click(object sender, EventArgs e)
+        private void removeColumnOneControls()
         {
-            RenameComputer ps = new RenameComputer();
-
-            ps.ChangeComputerName();
+            var control = tableLayoutPanel1.GetControlFromPosition(1, 0);
+            tableLayoutPanel1.Controls.Remove(control);
         }
+        #endregion
 
-        private void removeUACButton_Click_1(object sender, EventArgs e)
+        #region Buttons
+        private void UACOffButton_Click(object sender, EventArgs e)
         {
             UAC uacremove = new UAC();
             uacremove.removeUAC();
         }
-
+        private void firewallButton_Click(object sender, EventArgs e)
+        {
+            RemoveFirewall rf = new RemoveFirewall();
+            rf.AllOff();
+        }
         private void AboutButton_Click(object sender, EventArgs e)
         {
-            
+            removeColumnOneControls();
+
             RichTextBox rtb = new RichTextBox();
             rtb.ReadOnly = true;
             rtb.Dock = DockStyle.Fill;
+            rtb.DetectUrls = true;
+            rtb.LinkClicked += Rtb_LinkClicked;
             rtb.Text = "Welcome to Buildo where the automation Build Agent of the future!" + Environment.NewLine +
                 "Copyright 2019 MIT License" + Environment.NewLine +
                 "Github: https://github.com/CakeRepository/Buildo" + Environment.NewLine +
@@ -56,6 +64,14 @@ namespace Buildo
                 "Justin G. Trantham";
 
             tableLayoutPanel1.Controls.Add(rtb, 1, 0);
+
         }
+        private void powerSettingsButton_Click(object sender, EventArgs e)
+        {
+            RenameComputer ps = new RenameComputer();
+
+            ps.ChangeComputerName();
+        }
+        #endregion
     }
 }
