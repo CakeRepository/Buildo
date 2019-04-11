@@ -53,7 +53,7 @@ namespace Buildo
             rtb.DetectUrls = true;
             rtb.LinkClicked += Rtb_LinkClicked;
             rtb.Text = "Welcome to Buildo where the automation Build Agent of the future!" + Environment.NewLine +
-                "Copyright 2019 MIT License" + Environment.NewLine +
+                "License: https://github.com/CakeRepository/Buildo/blob/master/LICENSE" + Environment.NewLine +
                 "Github: https://github.com/CakeRepository/Buildo" + Environment.NewLine +
                 "Please let me know if there are any issues I'd be happy to assist" + Environment.NewLine +
                 Environment.NewLine +
