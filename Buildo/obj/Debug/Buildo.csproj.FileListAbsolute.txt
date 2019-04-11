@@ -7,3 +7,5 @@ c:\users\takes\documents\visual studio 2017\Projects\Buildo\Buildo\bin\Debug\Bui
 c:\users\takes\documents\visual studio 2017\Projects\Buildo\Buildo\bin\Debug\Buildo.pdb
 c:\users\takes\documents\visual studio 2017\Projects\Buildo\Buildo\obj\Debug\Buildo.exe
 c:\users\takes\documents\visual studio 2017\Projects\Buildo\Buildo\obj\Debug\Buildo.pdb
+C:\Users\takes\documents\visual studio 2017\Projects\Buildo\Buildo\bin\Debug\EntityFramework.dll
+C:\Users\takes\documents\visual studio 2017\Projects\Buildo\Buildo\bin\Debug\EntityFramework.xml
