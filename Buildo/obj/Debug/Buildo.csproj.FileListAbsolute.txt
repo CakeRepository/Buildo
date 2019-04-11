@@ -1,0 +1,9 @@
+c:\users\takes\documents\visual studio 2017\Projects\Buildo\Buildo\obj\Debug\Buildo.csprojResolveAssemblyReference.cache
+c:\users\takes\documents\visual studio 2017\Projects\Buildo\Buildo\obj\Debug\Buildo.Form1.resources
+c:\users\takes\documents\visual studio 2017\Projects\Buildo\Buildo\obj\Debug\Buildo.Properties.Resources.resources
+c:\users\takes\documents\visual studio 2017\Projects\Buildo\Buildo\obj\Debug\Buildo.csproj.GenerateResource.Cache
+c:\users\takes\documents\visual studio 2017\Projects\Buildo\Buildo\bin\Debug\Buildo.exe.config
+c:\users\takes\documents\visual studio 2017\Projects\Buildo\Buildo\bin\Debug\Buildo.exe
+c:\users\takes\documents\visual studio 2017\Projects\Buildo\Buildo\bin\Debug\Buildo.pdb
+c:\users\takes\documents\visual studio 2017\Projects\Buildo\Buildo\obj\Debug\Buildo.exe
+c:\users\takes\documents\visual studio 2017\Projects\Buildo\Buildo\obj\Debug\Buildo.pdb
