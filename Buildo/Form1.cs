@@ -3,10 +3,13 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
+using Microsoft.VisualBasic.Devices;
 using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -14,21 +17,75 @@ namespace Buildo
 {
     public partial class Form1 : Form
     {
+        PerformanceCounter cpuCounter;
+        PerformanceCounter ramCounter;
+        PerformanceCounter hddCounter;
+
         public Form1()
         {
             InitializeComponent();
+            systemResourcesBackgroundWorker.RunWorkerAsync();
         }
 
         #region Methods
+        private void systemResourcesBackgroundWorker_DoWork(object sender, DoWorkEventArgs e)
+        {
+            cpuCounter = new PerformanceCounter();
+            cpuCounter.CategoryName = "Processor Information";
+            cpuCounter.CounterName = "% Processor Time";
+            cpuCounter.InstanceName = "_Total";
+
+            ramCounter = new PerformanceCounter("Memory", "Available MBytes");
+
+            hddCounter = new PerformanceCounter("PhysicalDisk", "% Disk Time", "_Total");
+
+            ComputerInfo CI = new ComputerInfo();
+            ulong mem = ulong.Parse(CI.TotalPhysicalMemory.ToString());
+
+            int totalram = (int)(CI.TotalPhysicalMemory / (1024 * 1024));
+            string windows = CI.OSFullName + " " + CI.OSVersion;
+
+            while (1 == 1)
+            {
+                var t = getCPUUtil();
+                this.cpuProgressBar.Invoke((MethodInvoker)delegate {
+                    cpuProgressBar.Maximum = 100;
+                    cpuProgressBar.Value = (int)t.Item1;
+                });
+                this.ramProgressBar.Invoke((MethodInvoker)delegate {
+                    ramProgressBar.Maximum = totalram;
+                    ramProgressBar.Value = totalram - (int)t.Item2;
+                });
+                this.hardDriveProgressBar.Invoke((MethodInvoker)delegate {
+                    hardDriveProgressBar.Maximum = 100;
+                    if(t.Item3 <= 100)
+                    {
+                        hardDriveProgressBar.Value = (int)t.Item3;
+                    }
+                });
+                Thread.Sleep(1000);
+            }
+        }
         private void Rtb_LinkClicked(object sender, LinkClickedEventArgs e)
         {
             System.Diagnostics.Process.Start(e.LinkText);
         }
-
+        private void sethomepage()
+        {
+            removeColumnOneControls();
+            tableLayoutPanel1.Controls.Add(HomePanel, 1, 0);
+        }
         private void removeColumnOneControls()
         {
             var control = tableLayoutPanel1.GetControlFromPosition(1, 0);
             tableLayoutPanel1.Controls.Remove(control);
+        }
+        private Tuple<float, float, float> getCPUUtil()
+        {
+            float cpuUsage = cpuCounter.NextValue();
+            float ram = ramCounter.NextValue();
+            float hdd = hddCounter.NextValue();
+            return new Tuple<float, float, float>(cpuUsage, ram, hdd);
         }
         #endregion
 
@@ -82,8 +139,17 @@ namespace Buildo
             await Task.Run(() => choc.InstallPackages());
             chocoInstallsButton.Enabled = true;
         }
+        private void updateButton_Click(object sender, EventArgs e)
+        {
+            WindowsUpdate wu = new WindowsUpdate();
+
+            wu.OpenWindowsUpdate();
+        }
+        private void HomeButton_Click(object sender, EventArgs e)
+        {
+            sethomepage();
+        }
         #endregion
-
-
+        
     }
 }
