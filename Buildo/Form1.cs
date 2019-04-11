@@ -66,12 +66,24 @@ namespace Buildo
             tableLayoutPanel1.Controls.Add(rtb, 1, 0);
 
         }
-        private void powerSettingsButton_Click(object sender, EventArgs e)
+        private async void powerSettingsButton_ClickAsync(object sender, EventArgs e)
         {
             RenameComputer ps = new RenameComputer();
 
-            ps.ChangeComputerName();
+            powerSettingsButton.Enabled = false;
+            await Task.Run(() => ps.ChangeComputerName());
+            powerSettingsButton.Enabled = true;
+        }
+        private async void chocoInstallsButton_ClickAsync(object sender, EventArgs e)
+        {
+            Choco choc = new Choco();
+
+            chocoInstallsButton.Enabled = false;
+            await Task.Run(() => choc.InstallPackages());
+            chocoInstallsButton.Enabled = true;
         }
         #endregion
+
+
     }
 }

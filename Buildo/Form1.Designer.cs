@@ -35,6 +35,7 @@
             this.firewallButton = new System.Windows.Forms.Button();
             this.UACOffButton = new System.Windows.Forms.Button();
             this.AboutButton = new System.Windows.Forms.Button();
+            this.chocoInstallsButton = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -62,10 +63,11 @@
             this.powerSettingsButton.TabIndex = 1;
             this.powerSettingsButton.Text = "Power Settings";
             this.powerSettingsButton.UseVisualStyleBackColor = true;
-            this.powerSettingsButton.Click += new System.EventHandler(this.powerSettingsButton_Click);
+            this.powerSettingsButton.Click += new System.EventHandler(this.powerSettingsButton_ClickAsync);
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.chocoInstallsButton);
             this.panel1.Controls.Add(this.AboutButton);
             this.panel1.Controls.Add(this.UACOffButton);
             this.panel1.Controls.Add(this.firewallButton);
@@ -109,6 +111,17 @@
             this.AboutButton.UseVisualStyleBackColor = true;
             this.AboutButton.Click += new System.EventHandler(this.AboutButton_Click);
             // 
+            // chocoInstallsButton
+            // 
+            this.chocoInstallsButton.Dock = System.Windows.Forms.DockStyle.Top;
+            this.chocoInstallsButton.Location = new System.Drawing.Point(0, 135);
+            this.chocoInstallsButton.Name = "chocoInstallsButton";
+            this.chocoInstallsButton.Size = new System.Drawing.Size(115, 45);
+            this.chocoInstallsButton.TabIndex = 5;
+            this.chocoInstallsButton.Text = "Choco Installs";
+            this.chocoInstallsButton.UseVisualStyleBackColor = true;
+            this.chocoInstallsButton.Click += new System.EventHandler(this.chocoInstallsButton_ClickAsync);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -132,6 +145,7 @@
         private System.Windows.Forms.Button UACOffButton;
         private System.Windows.Forms.Button firewallButton;
         private System.Windows.Forms.Button AboutButton;
+        private System.Windows.Forms.Button chocoInstallsButton;
     }
 }
 
