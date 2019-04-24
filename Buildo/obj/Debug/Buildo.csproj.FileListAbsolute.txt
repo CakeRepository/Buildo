@@ -9,5 +9,3 @@ c:\users\takes\documents\visual studio 2017\Projects\Buildo\Buildo\obj\Debug\Bui
 C:\Users\takes\documents\visual studio 2017\Projects\Buildo\Buildo\bin\Debug\EntityFramework.dll
 C:\Users\takes\documents\visual studio 2017\Projects\Buildo\Buildo\bin\Debug\EntityFramework.xml
 C:\Users\takes\documents\visual studio 2017\Projects\Buildo\Buildo\obj\Debug\Buildo.csprojResolveAssemblyReference.cache
-C:\Users\takes\documents\visual studio 2017\Projects\Buildo\Buildo\obj\Debug\Buildo.TrustInfo.xml
-C:\Users\takes\documents\visual studio 2017\Projects\Buildo\Buildo\obj\Debug\Buildo.exe.manifest

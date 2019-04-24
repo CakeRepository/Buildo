@@ -23,6 +23,11 @@ namespace Buildo
         }
 
         #region Methods
+        private void log(string v)
+        {
+            DateTime now = DateTime.Now;
+            logListBox.Items.Add(now.ToString("F") + ": " + v);
+        }
         private void updateIU()
         {
             lib.TimeZone tz = new lib.TimeZone();
@@ -163,14 +168,7 @@ namespace Buildo
             EnableRDP eRDP = new EnableRDP();
             log("Enable RDP: " + eRDP.Enable());
             
-        }
-
-        private void log(string v)
-        {
-            DateTime now = DateTime.Now;
-            logListBox.Items.Add(now.ToString("F") + ": " + v);
-        }
-
+        }        
         private void updateTimeZoneButton_Click(object sender, EventArgs e)
         {
             lib.TimeZone tz = new lib.TimeZone();
@@ -182,12 +180,9 @@ namespace Buildo
             local = TimeZoneInfo.Local;
             updateIU();
         }
-
-
-        #endregion
-
         private async void automateButton_ClickAsync(object sender, EventArgs e)
         {
+            buttonPanel.Enabled = false;
             EnableRDP eRDP = new EnableRDP();
             Choco choc = new Choco();
             PowerSettings ps = new PowerSettings();
@@ -196,16 +191,16 @@ namespace Buildo
 
             log("UAC Settings: " + uacremove.removeUAC());
             log("Remove Firewall:" + rf.AllOff());
-            powerSettingsButton.Enabled = false;
             string psSettings = await Task.Run(() => ps.setPowerSettings());
             log(psSettings);
-            powerSettingsButton.Enabled = true;
-            chocoInstallsButton.Enabled = false;
             string t = await Task.Run(() => choc.InstallPackages());
             log("Choco: " + t);
-            chocoInstallsButton.Enabled = true;
             eRDP.Enable();
             log("Enable RDP: " + eRDP.Enable());
+            buttonPanel.Enabled = true;
         }
+        #endregion
+
+
     }
 }

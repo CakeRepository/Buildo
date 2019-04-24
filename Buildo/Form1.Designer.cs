@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.buttonPanel = new System.Windows.Forms.Panel();
             this.automateButton = new System.Windows.Forms.Button();
             this.enableRDP = new System.Windows.Forms.Button();
             this.HomeButton = new System.Windows.Forms.Button();
@@ -41,6 +41,7 @@
             this.firewallButton = new System.Windows.Forms.Button();
             this.powerSettingsButton = new System.Windows.Forms.Button();
             this.HomePanel = new System.Windows.Forms.Panel();
+            this.logListBox = new System.Windows.Forms.ListBox();
             this.currentTimeLabel = new System.Windows.Forms.Label();
             this.timeZoneComboBox = new System.Windows.Forms.ComboBox();
             this.updateTimeZoneButton = new System.Windows.Forms.Button();
@@ -55,9 +56,8 @@
             this.hardDriveProgressBar = new System.Windows.Forms.ProgressBar();
             this.ramProgressBar = new System.Windows.Forms.ProgressBar();
             this.systemResourcesBackgroundWorker = new System.ComponentModel.BackgroundWorker();
-            this.logListBox = new System.Windows.Forms.ListBox();
             this.tableLayoutPanel1.SuspendLayout();
-            this.panel1.SuspendLayout();
+            this.buttonPanel.SuspendLayout();
             this.HomePanel.SuspendLayout();
             this.UtilizationPanel.SuspendLayout();
             this.SuspendLayout();
@@ -67,7 +67,7 @@
             this.tableLayoutPanel1.ColumnCount = 2;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.46259F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 83.53741F));
-            this.tableLayoutPanel1.Controls.Add(this.panel1, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.buttonPanel, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.HomePanel, 1, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
@@ -77,22 +77,22 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(735, 536);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
-            // panel1
+            // buttonPanel
             // 
-            this.panel1.Controls.Add(this.automateButton);
-            this.panel1.Controls.Add(this.enableRDP);
-            this.panel1.Controls.Add(this.HomeButton);
-            this.panel1.Controls.Add(this.updateButton);
-            this.panel1.Controls.Add(this.chocoInstallsButton);
-            this.panel1.Controls.Add(this.AboutButton);
-            this.panel1.Controls.Add(this.UACOffButton);
-            this.panel1.Controls.Add(this.firewallButton);
-            this.panel1.Controls.Add(this.powerSettingsButton);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(3, 3);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(115, 530);
-            this.panel1.TabIndex = 2;
+            this.buttonPanel.Controls.Add(this.automateButton);
+            this.buttonPanel.Controls.Add(this.enableRDP);
+            this.buttonPanel.Controls.Add(this.HomeButton);
+            this.buttonPanel.Controls.Add(this.updateButton);
+            this.buttonPanel.Controls.Add(this.chocoInstallsButton);
+            this.buttonPanel.Controls.Add(this.AboutButton);
+            this.buttonPanel.Controls.Add(this.UACOffButton);
+            this.buttonPanel.Controls.Add(this.firewallButton);
+            this.buttonPanel.Controls.Add(this.powerSettingsButton);
+            this.buttonPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.buttonPanel.Location = new System.Drawing.Point(3, 3);
+            this.buttonPanel.Name = "buttonPanel";
+            this.buttonPanel.Size = new System.Drawing.Size(115, 530);
+            this.buttonPanel.TabIndex = 2;
             // 
             // automateButton
             // 
@@ -209,6 +209,14 @@
             this.HomePanel.Name = "HomePanel";
             this.HomePanel.Size = new System.Drawing.Size(608, 530);
             this.HomePanel.TabIndex = 3;
+            // 
+            // logListBox
+            // 
+            this.logListBox.FormattingEnabled = true;
+            this.logListBox.Location = new System.Drawing.Point(18, 233);
+            this.logListBox.Name = "logListBox";
+            this.logListBox.Size = new System.Drawing.Size(583, 82);
+            this.logListBox.TabIndex = 10;
             // 
             // currentTimeLabel
             // 
@@ -339,14 +347,6 @@
             // 
             this.systemResourcesBackgroundWorker.DoWork += new System.ComponentModel.DoWorkEventHandler(this.systemResourcesBackgroundWorker_DoWork);
             // 
-            // logListBox
-            // 
-            this.logListBox.FormattingEnabled = true;
-            this.logListBox.Location = new System.Drawing.Point(18, 233);
-            this.logListBox.Name = "logListBox";
-            this.logListBox.Size = new System.Drawing.Size(583, 82);
-            this.logListBox.TabIndex = 10;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -357,7 +357,7 @@
             this.Name = "Form1";
             this.Text = "Buildo";
             this.tableLayoutPanel1.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
+            this.buttonPanel.ResumeLayout(false);
             this.HomePanel.ResumeLayout(false);
             this.HomePanel.PerformLayout();
             this.UtilizationPanel.ResumeLayout(false);
@@ -370,7 +370,7 @@
 
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Button powerSettingsButton;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel buttonPanel;
         private System.Windows.Forms.Button UACOffButton;
         private System.Windows.Forms.Button firewallButton;
         private System.Windows.Forms.Button AboutButton;

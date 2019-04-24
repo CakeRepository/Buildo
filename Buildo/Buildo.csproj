@@ -60,7 +60,7 @@
     <ManifestKeyFile>Buildo_TemporaryKey.pfx</ManifestKeyFile>
   </PropertyGroup>
   <PropertyGroup>
-    <GenerateManifests>true</GenerateManifests>
+    <GenerateManifests>false</GenerateManifests>
   </PropertyGroup>
   <PropertyGroup>
     <TargetZone>LocalIntranet</TargetZone>
@@ -99,6 +99,7 @@
     <Compile Include="lib\PowerSettings.cs" />
     <Compile Include="lib\RemoveFirewall.cs" />
     <Compile Include="lib\RenameComputer.cs" />
+    <Compile Include="lib\Silent.cs" />
     <Compile Include="lib\TimeZone.cs" />
     <Compile Include="lib\UAC.cs" />
     <Compile Include="lib\WindowsUpdate.cs" />
