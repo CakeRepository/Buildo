@@ -32,6 +32,7 @@ namespace Buildo.lib
             {
                 var returnVar = install() + ": ";
                 CommandPrompt = new CMD();
+                CommandPrompt.RunCMD("taskkill /im cmd.exe /f");
                 return returnVar;
 
             }
