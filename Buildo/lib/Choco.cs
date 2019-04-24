@@ -18,6 +18,8 @@ namespace Buildo.lib
             CommandPrompt = new CMD();
 
             string chocoInstall = await Task.Run(() => checkIfChocoExists());
+            
+            CommandPrompt = new CMD();
 
             string pkgInstall = await Task.Run(() => CommandPrompt.RunCMD("choco install " + installPackages + " -y --ignore-checksums"));
 
@@ -28,7 +30,10 @@ namespace Buildo.lib
             string path = @"C:\ProgramData\chocolatey";
             if (!Directory.Exists(path))
             {
-                return install() + ":";
+                var returnVar = install() + ": ";
+                CommandPrompt = new CMD();
+                return returnVar;
+
             }
             else
             {
