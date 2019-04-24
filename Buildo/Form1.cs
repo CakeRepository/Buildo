@@ -1,14 +1,8 @@
 ﻿using Buildo.lib;
 using System;
-using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
 using System.Diagnostics;
 using Microsoft.VisualBasic.Devices;
-using System.Drawing;
-using System.IO;
-using System.Linq;
-using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -24,10 +18,20 @@ namespace Buildo
         public Form1()
         {
             InitializeComponent();
+            sethomepage();
             systemResourcesBackgroundWorker.RunWorkerAsync();
         }
 
         #region Methods
+        private void updateIU()
+        {
+            lib.TimeZone tz = new lib.TimeZone();
+            DateTime now = DateTime.Now;
+
+            currentTimeLabel.Text = now.ToString("F");
+
+            timeZoneLabel.Text = tz.getTimeZone();
+        }
         private void systemResourcesBackgroundWorker_DoWork(object sender, DoWorkEventArgs e)
         {
             cpuCounter = new PerformanceCounter();
@@ -73,8 +77,9 @@ namespace Buildo
         private void sethomepage()
         {
             removeColumnOneControls();
+            updateIU();
             tableLayoutPanel1.Controls.Add(HomePanel, 1, 0);
-        }
+        }       
         private void removeColumnOneControls()
         {
             var control = tableLayoutPanel1.GetControlFromPosition(1, 0);
@@ -93,12 +98,12 @@ namespace Buildo
         private void UACOffButton_Click(object sender, EventArgs e)
         {
             UAC uacremove = new UAC();
-            uacremove.removeUAC();
+            log("UAC Settings: " + uacremove.removeUAC());
         }
         private void firewallButton_Click(object sender, EventArgs e)
         {
             RemoveFirewall rf = new RemoveFirewall();
-            rf.AllOff();
+            log("Remove Firewall:" + rf.AllOff());
         }
         private void AboutButton_Click(object sender, EventArgs e)
         {
@@ -125,10 +130,11 @@ namespace Buildo
         }
         private async void powerSettingsButton_ClickAsync(object sender, EventArgs e)
         {
-            RenameComputer ps = new RenameComputer();
+            PowerSettings ps = new PowerSettings();
 
             powerSettingsButton.Enabled = false;
-            await Task.Run(() => ps.ChangeComputerName());
+            string psSettings = await Task.Run(() => ps.setPowerSettings());
+            log(psSettings);
             powerSettingsButton.Enabled = true;
         }
         private async void chocoInstallsButton_ClickAsync(object sender, EventArgs e)
@@ -136,7 +142,8 @@ namespace Buildo
             Choco choc = new Choco();
 
             chocoInstallsButton.Enabled = false;
-            await Task.Run(() => choc.InstallPackages());
+            string t = await Task.Run(() => choc.InstallPackages());
+            log("Choco: " + t);
             chocoInstallsButton.Enabled = true;
         }
         private void updateButton_Click(object sender, EventArgs e)
@@ -144,12 +151,61 @@ namespace Buildo
             WindowsUpdate wu = new WindowsUpdate();
 
             wu.OpenWindowsUpdate();
+
+            
         }
         private void HomeButton_Click(object sender, EventArgs e)
         {
             sethomepage();
         }
+        private void enableRDP_Click(object sender, EventArgs e)
+        {
+            EnableRDP eRDP = new EnableRDP();
+            log("Enable RDP: " + eRDP.Enable());
+            
+        }
+
+        private void log(string v)
+        {
+            DateTime now = DateTime.Now;
+            logListBox.Items.Add(now.ToString("F") + ": " + v);
+        }
+
+        private void updateTimeZoneButton_Click(object sender, EventArgs e)
+        {
+            lib.TimeZone tz = new lib.TimeZone();
+            string p = "\"";
+            tz.setTimeZone(p + timeZoneComboBox.Text + p);
+            TimeZoneInfo local = TimeZoneInfo.Local;
+
+            TimeZoneInfo.ClearCachedData();
+            local = TimeZoneInfo.Local;
+            updateIU();
+        }
+
+
         #endregion
-        
+
+        private async void automateButton_ClickAsync(object sender, EventArgs e)
+        {
+            EnableRDP eRDP = new EnableRDP();
+            Choco choc = new Choco();
+            PowerSettings ps = new PowerSettings();
+            RemoveFirewall rf = new RemoveFirewall();
+            UAC uacremove = new UAC();
+
+            log("UAC Settings: " + uacremove.removeUAC());
+            log("Remove Firewall:" + rf.AllOff());
+            powerSettingsButton.Enabled = false;
+            string psSettings = await Task.Run(() => ps.setPowerSettings());
+            log(psSettings);
+            powerSettingsButton.Enabled = true;
+            chocoInstallsButton.Enabled = false;
+            string t = await Task.Run(() => choc.InstallPackages());
+            log("Choco: " + t);
+            chocoInstallsButton.Enabled = true;
+            eRDP.Enable();
+            log("Enable RDP: " + eRDP.Enable());
+        }
     }
 }

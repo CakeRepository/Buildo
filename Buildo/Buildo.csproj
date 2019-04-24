@@ -11,6 +11,7 @@
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -23,8 +24,8 @@
     <MapFileExtensions>true</MapFileExtensions>
     <ApplicationRevision>0</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -51,6 +52,21 @@
   </PropertyGroup>
   <PropertyGroup>
     <ApplicationIcon>Program.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>E689E1F21E1B665896DCE3A45503BE5A4F3992C9</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>Buildo_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="EntityFramework, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
@@ -79,9 +95,11 @@
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="lib\Choco.cs" />
+    <Compile Include="lib\EnableRDP.cs" />
     <Compile Include="lib\PowerSettings.cs" />
     <Compile Include="lib\RemoveFirewall.cs" />
     <Compile Include="lib\RenameComputer.cs" />
+    <Compile Include="lib\TimeZone.cs" />
     <Compile Include="lib\UAC.cs" />
     <Compile Include="lib\WindowsUpdate.cs" />
     <Compile Include="Program.cs" />
@@ -103,6 +121,7 @@
     <None Include="app.manifest">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Buildo_TemporaryKey.pfx" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

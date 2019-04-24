@@ -1,21 +1,17 @@
 ﻿using Buildo.Resources;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Buildo.lib
 {
     class PowerSettings
     {
         private CMD CommandPrompt;
-        public void setPowerSettings()
+        public string setPowerSettings()
         {
             CommandPrompt = new CMD();
             removeHibernate();
             setHardDriveSleep();
-            setSleepTime();           
+            setSleepTime();
+            return "Power Settings Set";
         }
 
         private void setHardDriveSleep()

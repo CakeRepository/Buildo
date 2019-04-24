@@ -1,0 +1,10 @@
+C:\Users\takes\documents\visual studio 2017\Projects\Buildo\Buildo\bin\Release\Buildo.exe.config
+C:\Users\takes\documents\visual studio 2017\Projects\Buildo\Buildo\bin\Release\Buildo.exe
+C:\Users\takes\documents\visual studio 2017\Projects\Buildo\Buildo\bin\Release\Buildo.pdb
+C:\Users\takes\documents\visual studio 2017\Projects\Buildo\Buildo\bin\Release\EntityFramework.dll
+C:\Users\takes\documents\visual studio 2017\Projects\Buildo\Buildo\bin\Release\EntityFramework.xml
+C:\Users\takes\documents\visual studio 2017\Projects\Buildo\Buildo\obj\Release\Buildo.Form1.resources
+C:\Users\takes\documents\visual studio 2017\Projects\Buildo\Buildo\obj\Release\Buildo.Properties.Resources.resources
+C:\Users\takes\documents\visual studio 2017\Projects\Buildo\Buildo\obj\Release\Buildo.csproj.GenerateResource.Cache
+C:\Users\takes\documents\visual studio 2017\Projects\Buildo\Buildo\obj\Release\Buildo.exe
+C:\Users\takes\documents\visual studio 2017\Projects\Buildo\Buildo\obj\Release\Buildo.pdb

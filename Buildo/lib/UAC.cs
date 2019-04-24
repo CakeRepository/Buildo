@@ -1,35 +1,17 @@
-﻿using Microsoft.Win32;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Buildo.Resources;
 
 namespace Buildo.lib
 {
     class UAC
     {
-        //Setup Reg Path
-        const string SoftwareRootToUAC = @"HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System";
-        const string subkey = "EnableLUA";
+        private CMD CommandPrompt;
 
-        public int removeUAC()
+
+        public string removeUAC()
         {
-            //Set Reg Key
-            Registry.SetValue(SoftwareRootToUAC, subkey, "0" ,RegistryValueKind.DWord);
-
-            //Get Reg Key
-            int rInteger = (int)Registry.GetValue(SoftwareRootToUAC, subkey, 1);
-
-            if (rInteger != 1)
-            {
-                //Success
-                return 0;
-            }
-            else{
-                //Fail
-                return 1;
-            }
+            CommandPrompt = new CMD();
+            return CommandPrompt.RunCMD(@"reg.exe ADD HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System /v EnableLUA /t REG_DWORD /d 0 /f");
+            
         }
     }
 }

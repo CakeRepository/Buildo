@@ -8,7 +8,7 @@ namespace Buildo.Resources
 {
     class CMD
     {
-        public void RunCMD(string command)
+        public string RunCMD(string command)
         {
             try
             {
@@ -33,11 +33,15 @@ namespace Buildo.Resources
                 string result = proc.StandardOutput.ReadToEnd();
                 // Display the command output.
                 Console.WriteLine(result);
+                return (result);
+                
             }
             catch (Exception objException)
             {
                 // Log the exception
                 Console.WriteLine("error");
+                return ("error");
+                
             }
         }
     }

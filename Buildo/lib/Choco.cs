@@ -11,30 +11,35 @@ namespace Buildo.lib
     class Choco
     {
         private CMD CommandPrompt;
-        private const string packages = "7zip adobeair jre8 googlechrome flashplayerplugin adobeshockwaveplayer silverlight";
-        
-        public async Task InstallPackages(string installPackages = packages)
+        //private const string packages = "7zip adobeair jre8 googlechrome flashplayerplugin adobeshockwaveplayer silverlight";
+        private const string packages = "7zip googlechrome";
+        public async Task<string> InstallPackages(string installPackages = packages)
         {
             CommandPrompt = new CMD();
 
-            await Task.Run(() => checkIfChocoExists());
+            string chocoInstall = await Task.Run(() => checkIfChocoExists());
 
-            await Task.Run(() => CommandPrompt.RunCMD("choco install " + installPackages + " -y --ignore-checksums"));
+            string pkgInstall = await Task.Run(() => CommandPrompt.RunCMD("choco install " + installPackages + " -y --ignore-checksums"));
+
+            return chocoInstall + " " + pkgInstall;
         }
-        private void checkIfChocoExists()
+        private string checkIfChocoExists()
         {
             string path = @"C:\ProgramData\chocolatey";
             if (!Directory.Exists(path))
             {
-                install();
-                CommandPrompt = new CMD();
+                return install() + ":";
+            }
+            else
+            {
+                return "Choco Installed:";
             }
         }
             
     
-        private void install()
+        private string install()
         {
-            CommandPrompt.RunCMD(@"@powershell -NoProfile -ExecutionPolicy Bypass -Command ""iex ((new-object net.webclient).DownloadString('https://chocolatey.org/install.ps1'))"" && SET PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin");
+           return CommandPrompt.RunCMD(@"@powershell -NoProfile -ExecutionPolicy Bypass -Command ""iex ((new-object net.webclient).DownloadString('https://chocolatey.org/install.ps1'))"" && SET PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin");
         }
 
     }

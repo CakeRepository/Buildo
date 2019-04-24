@@ -1,4 +1,3 @@
-c:\users\takes\documents\visual studio 2017\Projects\Buildo\Buildo\obj\Debug\Buildo.csprojResolveAssemblyReference.cache
 c:\users\takes\documents\visual studio 2017\Projects\Buildo\Buildo\obj\Debug\Buildo.Form1.resources
 c:\users\takes\documents\visual studio 2017\Projects\Buildo\Buildo\obj\Debug\Buildo.Properties.Resources.resources
 c:\users\takes\documents\visual studio 2017\Projects\Buildo\Buildo\obj\Debug\Buildo.csproj.GenerateResource.Cache
@@ -9,3 +8,6 @@ c:\users\takes\documents\visual studio 2017\Projects\Buildo\Buildo\obj\Debug\Bui
 c:\users\takes\documents\visual studio 2017\Projects\Buildo\Buildo\obj\Debug\Buildo.pdb
 C:\Users\takes\documents\visual studio 2017\Projects\Buildo\Buildo\bin\Debug\EntityFramework.dll
 C:\Users\takes\documents\visual studio 2017\Projects\Buildo\Buildo\bin\Debug\EntityFramework.xml
+C:\Users\takes\documents\visual studio 2017\Projects\Buildo\Buildo\obj\Debug\Buildo.csprojResolveAssemblyReference.cache
+C:\Users\takes\documents\visual studio 2017\Projects\Buildo\Buildo\obj\Debug\Buildo.TrustInfo.xml
+C:\Users\takes\documents\visual studio 2017\Projects\Buildo\Buildo\obj\Debug\Buildo.exe.manifest
