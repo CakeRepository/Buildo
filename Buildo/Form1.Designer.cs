@@ -71,10 +71,11 @@
             this.tableLayoutPanel1.Controls.Add(this.HomePanel, 1, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 91.60448F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(735, 536);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(980, 660);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // buttonPanel
@@ -89,17 +90,19 @@
             this.buttonPanel.Controls.Add(this.firewallButton);
             this.buttonPanel.Controls.Add(this.powerSettingsButton);
             this.buttonPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.buttonPanel.Location = new System.Drawing.Point(3, 3);
+            this.buttonPanel.Location = new System.Drawing.Point(4, 4);
+            this.buttonPanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.buttonPanel.Name = "buttonPanel";
-            this.buttonPanel.Size = new System.Drawing.Size(115, 530);
+            this.buttonPanel.Size = new System.Drawing.Size(153, 652);
             this.buttonPanel.TabIndex = 2;
             // 
             // automateButton
             // 
             this.automateButton.Dock = System.Windows.Forms.DockStyle.Top;
-            this.automateButton.Location = new System.Drawing.Point(0, 270);
+            this.automateButton.Location = new System.Drawing.Point(0, 330);
+            this.automateButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.automateButton.Name = "automateButton";
-            this.automateButton.Size = new System.Drawing.Size(115, 45);
+            this.automateButton.Size = new System.Drawing.Size(153, 55);
             this.automateButton.TabIndex = 9;
             this.automateButton.Text = "Automate";
             this.automateButton.UseVisualStyleBackColor = true;
@@ -108,9 +111,10 @@
             // enableRDP
             // 
             this.enableRDP.Dock = System.Windows.Forms.DockStyle.Top;
-            this.enableRDP.Location = new System.Drawing.Point(0, 225);
+            this.enableRDP.Location = new System.Drawing.Point(0, 275);
+            this.enableRDP.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.enableRDP.Name = "enableRDP";
-            this.enableRDP.Size = new System.Drawing.Size(115, 45);
+            this.enableRDP.Size = new System.Drawing.Size(153, 55);
             this.enableRDP.TabIndex = 8;
             this.enableRDP.Text = "Enable RDP";
             this.enableRDP.UseVisualStyleBackColor = true;
@@ -119,9 +123,10 @@
             // HomeButton
             // 
             this.HomeButton.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.HomeButton.Location = new System.Drawing.Point(0, 440);
+            this.HomeButton.Location = new System.Drawing.Point(0, 542);
+            this.HomeButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.HomeButton.Name = "HomeButton";
-            this.HomeButton.Size = new System.Drawing.Size(115, 45);
+            this.HomeButton.Size = new System.Drawing.Size(153, 55);
             this.HomeButton.TabIndex = 7;
             this.HomeButton.Text = "Home";
             this.HomeButton.UseVisualStyleBackColor = true;
@@ -130,9 +135,10 @@
             // updateButton
             // 
             this.updateButton.Dock = System.Windows.Forms.DockStyle.Top;
-            this.updateButton.Location = new System.Drawing.Point(0, 180);
+            this.updateButton.Location = new System.Drawing.Point(0, 220);
+            this.updateButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.updateButton.Name = "updateButton";
-            this.updateButton.Size = new System.Drawing.Size(115, 45);
+            this.updateButton.Size = new System.Drawing.Size(153, 55);
             this.updateButton.TabIndex = 6;
             this.updateButton.Text = "Updates";
             this.updateButton.UseVisualStyleBackColor = true;
@@ -141,9 +147,10 @@
             // chocoInstallsButton
             // 
             this.chocoInstallsButton.Dock = System.Windows.Forms.DockStyle.Top;
-            this.chocoInstallsButton.Location = new System.Drawing.Point(0, 135);
+            this.chocoInstallsButton.Location = new System.Drawing.Point(0, 165);
+            this.chocoInstallsButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.chocoInstallsButton.Name = "chocoInstallsButton";
-            this.chocoInstallsButton.Size = new System.Drawing.Size(115, 45);
+            this.chocoInstallsButton.Size = new System.Drawing.Size(153, 55);
             this.chocoInstallsButton.TabIndex = 5;
             this.chocoInstallsButton.Text = "Choco Installs";
             this.chocoInstallsButton.UseVisualStyleBackColor = true;
@@ -152,9 +159,10 @@
             // AboutButton
             // 
             this.AboutButton.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.AboutButton.Location = new System.Drawing.Point(0, 485);
+            this.AboutButton.Location = new System.Drawing.Point(0, 597);
+            this.AboutButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.AboutButton.Name = "AboutButton";
-            this.AboutButton.Size = new System.Drawing.Size(115, 45);
+            this.AboutButton.Size = new System.Drawing.Size(153, 55);
             this.AboutButton.TabIndex = 4;
             this.AboutButton.Text = "About";
             this.AboutButton.UseVisualStyleBackColor = true;
@@ -163,9 +171,10 @@
             // UACOffButton
             // 
             this.UACOffButton.Dock = System.Windows.Forms.DockStyle.Top;
-            this.UACOffButton.Location = new System.Drawing.Point(0, 90);
+            this.UACOffButton.Location = new System.Drawing.Point(0, 110);
+            this.UACOffButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.UACOffButton.Name = "UACOffButton";
-            this.UACOffButton.Size = new System.Drawing.Size(115, 45);
+            this.UACOffButton.Size = new System.Drawing.Size(153, 55);
             this.UACOffButton.TabIndex = 3;
             this.UACOffButton.Text = "UAC Off";
             this.UACOffButton.UseVisualStyleBackColor = true;
@@ -174,9 +183,10 @@
             // firewallButton
             // 
             this.firewallButton.Dock = System.Windows.Forms.DockStyle.Top;
-            this.firewallButton.Location = new System.Drawing.Point(0, 45);
+            this.firewallButton.Location = new System.Drawing.Point(0, 55);
+            this.firewallButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.firewallButton.Name = "firewallButton";
-            this.firewallButton.Size = new System.Drawing.Size(115, 45);
+            this.firewallButton.Size = new System.Drawing.Size(153, 55);
             this.firewallButton.TabIndex = 2;
             this.firewallButton.Text = "Firewall Off";
             this.firewallButton.UseVisualStyleBackColor = true;
@@ -186,8 +196,9 @@
             // 
             this.powerSettingsButton.Dock = System.Windows.Forms.DockStyle.Top;
             this.powerSettingsButton.Location = new System.Drawing.Point(0, 0);
+            this.powerSettingsButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.powerSettingsButton.Name = "powerSettingsButton";
-            this.powerSettingsButton.Size = new System.Drawing.Size(115, 45);
+            this.powerSettingsButton.Size = new System.Drawing.Size(153, 55);
             this.powerSettingsButton.TabIndex = 1;
             this.powerSettingsButton.Text = "Power Settings";
             this.powerSettingsButton.UseVisualStyleBackColor = true;
@@ -205,25 +216,30 @@
             this.HomePanel.Controls.Add(this.label1);
             this.HomePanel.Controls.Add(this.UtilizationPanel);
             this.HomePanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.HomePanel.Location = new System.Drawing.Point(124, 3);
+            this.HomePanel.Location = new System.Drawing.Point(165, 4);
+            this.HomePanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.HomePanel.Name = "HomePanel";
-            this.HomePanel.Size = new System.Drawing.Size(608, 530);
+            this.HomePanel.Size = new System.Drawing.Size(811, 652);
             this.HomePanel.TabIndex = 3;
+            this.HomePanel.Paint += new System.Windows.Forms.PaintEventHandler(this.HomePanel_Paint);
             // 
             // logListBox
             // 
             this.logListBox.FormattingEnabled = true;
-            this.logListBox.Location = new System.Drawing.Point(18, 233);
+            this.logListBox.ItemHeight = 16;
+            this.logListBox.Location = new System.Drawing.Point(24, 287);
+            this.logListBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.logListBox.Name = "logListBox";
-            this.logListBox.Size = new System.Drawing.Size(583, 82);
+            this.logListBox.Size = new System.Drawing.Size(776, 100);
             this.logListBox.TabIndex = 10;
             // 
             // currentTimeLabel
             // 
             this.currentTimeLabel.AutoSize = true;
-            this.currentTimeLabel.Location = new System.Drawing.Point(104, 32);
+            this.currentTimeLabel.Location = new System.Drawing.Point(139, 39);
+            this.currentTimeLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.currentTimeLabel.Name = "currentTimeLabel";
-            this.currentTimeLabel.Size = new System.Drawing.Size(89, 13);
+            this.currentTimeLabel.Size = new System.Drawing.Size(119, 17);
             this.currentTimeLabel.TabIndex = 9;
             this.currentTimeLabel.Text = "currentTimeLabel";
             // 
@@ -236,16 +252,18 @@
             "Mountain Standard Time",
             "Pacific Standard Time",
             "Eastern Standard Time"});
-            this.timeZoneComboBox.Location = new System.Drawing.Point(107, 58);
+            this.timeZoneComboBox.Location = new System.Drawing.Point(143, 71);
+            this.timeZoneComboBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.timeZoneComboBox.Name = "timeZoneComboBox";
-            this.timeZoneComboBox.Size = new System.Drawing.Size(168, 21);
+            this.timeZoneComboBox.Size = new System.Drawing.Size(223, 24);
             this.timeZoneComboBox.TabIndex = 8;
             // 
             // updateTimeZoneButton
             // 
-            this.updateTimeZoneButton.Location = new System.Drawing.Point(106, 90);
+            this.updateTimeZoneButton.Location = new System.Drawing.Point(141, 111);
+            this.updateTimeZoneButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.updateTimeZoneButton.Name = "updateTimeZoneButton";
-            this.updateTimeZoneButton.Size = new System.Drawing.Size(75, 23);
+            this.updateTimeZoneButton.Size = new System.Drawing.Size(100, 28);
             this.updateTimeZoneButton.TabIndex = 7;
             this.updateTimeZoneButton.Text = "Update";
             this.updateTimeZoneButton.UseVisualStyleBackColor = true;
@@ -254,27 +272,30 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(15, 61);
+            this.label4.Location = new System.Drawing.Point(20, 75);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(86, 13);
+            this.label4.Size = new System.Drawing.Size(111, 17);
             this.label4.TabIndex = 6;
             this.label4.Text = "New Time Zone:";
             // 
             // timeZoneLabel
             // 
             this.timeZoneLabel.AutoSize = true;
-            this.timeZoneLabel.Location = new System.Drawing.Point(104, 10);
+            this.timeZoneLabel.Location = new System.Drawing.Point(139, 12);
+            this.timeZoneLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.timeZoneLabel.Name = "timeZoneLabel";
-            this.timeZoneLabel.Size = new System.Drawing.Size(77, 13);
+            this.timeZoneLabel.Size = new System.Drawing.Size(102, 17);
             this.timeZoneLabel.TabIndex = 5;
             this.timeZoneLabel.Text = "timeZoneLabel";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 10);
+            this.label1.Location = new System.Drawing.Point(16, 12);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(61, 13);
+            this.label1.Size = new System.Drawing.Size(80, 17);
             this.label1.TabIndex = 4;
             this.label1.Text = "Time Zone:";
             // 
@@ -287,18 +308,20 @@
             this.UtilizationPanel.Controls.Add(this.hardDriveProgressBar);
             this.UtilizationPanel.Controls.Add(this.ramProgressBar);
             this.UtilizationPanel.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.UtilizationPanel.Location = new System.Drawing.Point(0, 334);
+            this.UtilizationPanel.Location = new System.Drawing.Point(0, 411);
+            this.UtilizationPanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.UtilizationPanel.Name = "UtilizationPanel";
-            this.UtilizationPanel.Size = new System.Drawing.Size(608, 196);
+            this.UtilizationPanel.Size = new System.Drawing.Size(811, 241);
             this.UtilizationPanel.TabIndex = 3;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(537, 159);
+            this.label3.Location = new System.Drawing.Point(716, 196);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(58, 13);
+            this.label3.Size = new System.Drawing.Size(76, 17);
             this.label3.TabIndex = 11;
             this.label3.Text = "Hard Drive";
             // 
@@ -306,9 +329,10 @@
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(566, 105);
+            this.label2.Location = new System.Drawing.Point(755, 129);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(31, 13);
+            this.label2.Size = new System.Drawing.Size(38, 17);
             this.label2.TabIndex = 10;
             this.label2.Text = "RAM";
             // 
@@ -316,31 +340,35 @@
             // 
             this.CPUL.AutoSize = true;
             this.CPUL.BackColor = System.Drawing.Color.White;
-            this.CPUL.Location = new System.Drawing.Point(566, 48);
+            this.CPUL.Location = new System.Drawing.Point(755, 59);
+            this.CPUL.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.CPUL.Name = "CPUL";
-            this.CPUL.Size = new System.Drawing.Size(29, 13);
+            this.CPUL.Size = new System.Drawing.Size(36, 17);
             this.CPUL.TabIndex = 9;
             this.CPUL.Text = "CPU";
             // 
             // cpuProgressBar
             // 
-            this.cpuProgressBar.Location = new System.Drawing.Point(12, 19);
+            this.cpuProgressBar.Location = new System.Drawing.Point(16, 23);
+            this.cpuProgressBar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cpuProgressBar.Name = "cpuProgressBar";
-            this.cpuProgressBar.Size = new System.Drawing.Size(587, 50);
+            this.cpuProgressBar.Size = new System.Drawing.Size(783, 62);
             this.cpuProgressBar.TabIndex = 8;
             // 
             // hardDriveProgressBar
             // 
-            this.hardDriveProgressBar.Location = new System.Drawing.Point(12, 131);
+            this.hardDriveProgressBar.Location = new System.Drawing.Point(16, 161);
+            this.hardDriveProgressBar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.hardDriveProgressBar.Name = "hardDriveProgressBar";
-            this.hardDriveProgressBar.Size = new System.Drawing.Size(587, 50);
+            this.hardDriveProgressBar.Size = new System.Drawing.Size(783, 62);
             this.hardDriveProgressBar.TabIndex = 7;
             // 
             // ramProgressBar
             // 
-            this.ramProgressBar.Location = new System.Drawing.Point(12, 75);
+            this.ramProgressBar.Location = new System.Drawing.Point(16, 92);
+            this.ramProgressBar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.ramProgressBar.Name = "ramProgressBar";
-            this.ramProgressBar.Size = new System.Drawing.Size(587, 50);
+            this.ramProgressBar.Size = new System.Drawing.Size(783, 62);
             this.ramProgressBar.TabIndex = 6;
             // 
             // systemResourcesBackgroundWorker
@@ -349,11 +377,13 @@
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(735, 536);
+            this.ClientSize = new System.Drawing.Size(980, 660);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.MinimumSize = new System.Drawing.Size(998, 707);
             this.Name = "Form1";
             this.Text = "Buildo";
             this.tableLayoutPanel1.ResumeLayout(false);

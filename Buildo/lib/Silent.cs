@@ -14,7 +14,7 @@ namespace Buildo.lib
             Console.WriteLine(now.ToString("F") + ": " + msgLog);
         }
 
-        public async void runAsync()
+        public async void RunSilent()
         {
             EnableRDP eRDP = new EnableRDP();
             Choco choc = new Choco();
@@ -23,11 +23,15 @@ namespace Buildo.lib
             UAC uacremove = new UAC();
 
             log("UAC Settings: " + uacremove.removeUAC());
+
             log("Remove Firewall:" + rf.AllOff());
-            string psSettings = await Task.Run(() => ps.setPowerSettings());
+
+            string psSettings = ps.setPowerSettings();
             log(psSettings);
-            string t = await Task.Run(() => choc.InstallPackages());
+            
+            string t = choc.silentRun();
             log("Choco: " + t);
+
             eRDP.Enable();
             log("Enable RDP: " + eRDP.Enable());
         }

@@ -31,8 +31,6 @@ namespace Buildo.lib
             if (!Directory.Exists(path))
             {
                 var returnVar = install() + ": ";
-                CommandPrompt = new CMD();
-                CommandPrompt.RunCMD("taskkill /im cmd.exe /f");
                 return returnVar;
 
             }
@@ -48,5 +46,17 @@ namespace Buildo.lib
            return CommandPrompt.RunCMD(@"@powershell -NoProfile -ExecutionPolicy Bypass -Command ""iex ((new-object net.webclient).DownloadString('https://chocolatey.org/install.ps1'))"" && SET PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin");
         }
 
+
+        public string silentRun(string installPackages = packages)
+        {
+            CommandPrompt = new CMD();
+            string chocoInstall = checkIfChocoExists();
+
+            //Not working because closing cmd causes issues with the way the program reacts
+            //CommandPrompt = new CMD();
+            //string pkgInstall = CommandPrompt.RunCMD("choco install " + installPackages + " -y --ignore-checksums");
+
+            return chocoInstall;
+        }
     }
 }

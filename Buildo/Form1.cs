@@ -199,8 +199,12 @@ namespace Buildo
             log("Enable RDP: " + eRDP.Enable());
             buttonPanel.Enabled = true;
         }
+
         #endregion
 
+        private void HomePanel_Paint(object sender, PaintEventArgs e)
+        {
 
+        }
     }
 }
