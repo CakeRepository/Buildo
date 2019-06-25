@@ -32,12 +32,12 @@ namespace Buildo
                 AttachConsole(ATTACH_PARENT_PROCESS);
                 bool show_help = false;
                 bool automate = false;
-                List<string> names = new List<string>();
+                string filepath = null;
                 int repeat = 1;
 
                 var p = new OptionSet() {
-            { "n|name=", "the {NAME} of someone to greet.",
-              v => names.Add (v) },
+            { "f|filepath=", "the {Full Config File Path} of your configuration file.",
+              v => filepath = v },
             { "r|repeat=",
                 "the number of {TIMES} to repeat the greeting.\n" +
                     "this must be an integer.",
@@ -55,17 +55,20 @@ namespace Buildo
                 }
                 catch (OptionException e)
                 {
-                    Console.Write("greet: ");
-                    Console.WriteLine(e.Message);
                     Console.WriteLine("Try `greet --help' for more information.");
                     return;
                 }
                 if (automate)
                 {
-                    Silent s = new Silent();
-                    s.RunSilent();
-                    
-                    return;
+                    if (filepath == null)
+                    {
+                        Silent s = new Silent();
+                        s.RunSilent();
+
+                        return;
+                    }
+
+
                 }
                 if (show_help)
                 {
