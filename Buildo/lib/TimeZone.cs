@@ -7,9 +7,17 @@ using System.Threading.Tasks;
 
 namespace Buildo.lib
 {
+    /// <summary>
+    /// Wrapper for timezome related changes
+    /// </summary>
     class TimeZone
     {
         private CMD CommandPrompt;
+
+        /// <summary>
+        /// Gets current Time Zone of workstation to display in GUI
+        /// </summary>
+        /// <returns>Current Timezone</returns>
         public string getTimeZone()
         {
             CommandPrompt = new CMD();
@@ -20,6 +28,10 @@ namespace Buildo.lib
             return tz;
         }
 
+        /// <summary>
+        /// Sets timezone with TZUTIL through CMD
+        /// </summary>
+        /// <param name="newTimeZone">Requeted timezone this must match Microsofts timezone naming convention</param>
         public void setTimeZone(string newTimeZone)
         {
             CommandPrompt = new CMD();

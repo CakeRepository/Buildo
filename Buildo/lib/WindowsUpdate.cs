@@ -7,9 +7,17 @@ using System.Threading.Tasks;
 
 namespace Buildo.lib
 {
+
+    /// <summary>
+    /// Wrapper for windows updates through C# its pretty bad currently
+    /// </summary>
     class WindowsUpdate
     {
         private CMD CommandPrompt;
+
+        /// <summary>
+        /// Really stupid only opens CMD Will implimet powershell at somepoint to automate
+        /// </summary>
         public void OpenWindowsUpdate()
         {
             CommandPrompt = new CMD();

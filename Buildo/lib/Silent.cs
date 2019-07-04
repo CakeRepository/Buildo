@@ -14,7 +14,7 @@ namespace Buildo.lib
             Console.WriteLine(now.ToString("F") + ": " + msgLog);
         }
 
-        public async void RunSilent()
+        public void RunSilent()
         {
             EnableRDP eRDP = new EnableRDP();
             Choco choc = new Choco();

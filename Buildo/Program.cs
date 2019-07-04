@@ -16,7 +16,7 @@ namespace Buildo
         static extern bool AttachConsole(int dwProcessId);
         private const int ATTACH_PARENT_PROCESS = -1;
         /// <summary>
-        /// The main entry point for the application.
+        /// The main entry point for the application. Allowing args and parsing with ndesk
         /// </summary>
         [STAThread]
         static void Main(string[] args)
@@ -38,9 +38,8 @@ namespace Buildo
                 var p = new OptionSet() {
             { "f|filepath=", "the {Full Config File Path} of your configuration file.",
               v => filepath = v },
-            { "r|repeat=",
-                "the number of {TIMES} to repeat the greeting.\n" +
-                    "this must be an integer.",
+            { "s|server=",
+                "this runs {SERVER} customization automation.",
               (int v) => repeat = v },
             { "h|help",  "show this message and exit",
               v => show_help = v != null },
@@ -75,9 +74,6 @@ namespace Buildo
                     ShowHelp(p);
                     return;
                 }
-
-                string message;
-                Application.Exit();
             }            
         }
          static void ShowHelp(OptionSet p)
