@@ -33,18 +33,23 @@ namespace Buildo
                 bool show_help = false;
                 bool automate = false;
                 string filepath = null;
-                int repeat = 1;
+                string timezone = null;
+                char pt = '"';
+
 
                 var p = new OptionSet() {
             { "f|filepath=", "the {Full Config File Path} of your configuration file.",
               v => filepath = v },
-            { "s|server=",
-                "this runs {SERVER} customization automation.",
-              (int v) => repeat = v },
             { "h|help",  "show this message and exit",
               v => show_help = v != null },
             { "a|automate",  "Install Choco ansd set default settings",
               v => automate = v != null },
+            { "tz|timezone=",  "Set Computer {TIMEZONE}. EX\n" +
+                    "Pacific Standard Time\n" +
+                    "Central Standard Time\n" +
+                    "Mountain Standard Time\n" +
+                    "Eastern Standard Time\n",
+              v => timezone = v },
         };
 
                 List<string> extra;
@@ -56,6 +61,12 @@ namespace Buildo
                 {
                     Console.WriteLine("Try `greet --help' for more information.");
                     return;
+                }
+                if (timezone != null)
+                {
+                    lib.TimeZone tz = new lib.TimeZone();
+                    
+                    tz.setTimeZone(pt + timezone + pt);
                 }
                 if (automate)
                 {
