@@ -46,11 +46,18 @@ namespace Buildo
         private void updateIU()
         {
             lib.TimeZone tz = new lib.TimeZone();
+            LocalInfo li = new LocalInfo();
             DateTime now = DateTime.Now;
 
             currentTimeLabel.Text = now.ToString("F");
 
             timeZoneLabel.Text = tz.getTimeZone();
+
+            domainLabel.Text = li.getLocalWorkstationDomain();
+
+            currentUserLabel.Text = li.getCurrentUser();
+
+            computerNameLabel.Text = li.getMachineName();
         }
         /// <summary>
         /// background worker to get information about system resources
@@ -238,9 +245,6 @@ namespace Buildo
 
         #endregion
 
-        private void HomePanel_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
+        
     }
 }

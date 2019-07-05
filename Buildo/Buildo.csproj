@@ -80,6 +80,7 @@
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.Entity" />
+    <Reference Include="System.DirectoryServices" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -98,6 +99,7 @@
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="lib\Choco.cs" />
+    <Compile Include="lib\LocalInfo.cs" />
     <Compile Include="lib\EnableRDP.cs" />
     <Compile Include="lib\PowerSettings.cs" />
     <Compile Include="lib\RemoveFirewall.cs" />
