@@ -8,3 +8,17 @@ C:\Users\takes\documents\visual studio 2017\Projects\Buildo\Buildo\obj\Release\B
 C:\Users\takes\documents\visual studio 2017\Projects\Buildo\Buildo\obj\Release\Buildo.csproj.GenerateResource.Cache
 C:\Users\takes\documents\visual studio 2017\Projects\Buildo\Buildo\obj\Release\Buildo.exe
 C:\Users\takes\documents\visual studio 2017\Projects\Buildo\Buildo\obj\Release\Buildo.pdb
+C:\Users\Owner\Source\Repos\Buildo\Buildo\bin\Release\Buildo.exe.config
+C:\Users\Owner\Source\Repos\Buildo\Buildo\bin\Release\Buildo.exe
+C:\Users\Owner\Source\Repos\Buildo\Buildo\bin\Release\Buildo.pdb
+C:\Users\Owner\Source\Repos\Buildo\Buildo\bin\Release\EntityFramework.dll
+C:\Users\Owner\Source\Repos\Buildo\Buildo\bin\Release\NDesk.Options.dll
+C:\Users\Owner\Source\Repos\Buildo\Buildo\bin\Release\EntityFramework.xml
+C:\Users\Owner\Source\Repos\Buildo\Buildo\obj\Release\Buildo.csprojAssemblyReference.cache
+C:\Users\Owner\Source\Repos\Buildo\Buildo\obj\Release\Buildo.Form1.resources
+C:\Users\Owner\Source\Repos\Buildo\Buildo\obj\Release\Buildo.Properties.Resources.resources
+C:\Users\Owner\Source\Repos\Buildo\Buildo\obj\Release\Buildo.csproj.GenerateResource.cache
+C:\Users\Owner\Source\Repos\Buildo\Buildo\obj\Release\Buildo.csproj.CoreCompileInputs.cache
+C:\Users\Owner\Source\Repos\Buildo\Buildo\obj\Release\Buildo.csproj.CopyComplete
+C:\Users\Owner\Source\Repos\Buildo\Buildo\obj\Release\Buildo.exe
+C:\Users\Owner\Source\Repos\Buildo\Buildo\obj\Release\Buildo.pdb

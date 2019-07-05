@@ -11,10 +11,16 @@ namespace Buildo
 {
     public partial class Form1 : Form
     {
+
+        #region Init Variables
         PerformanceCounter cpuCounter;
         PerformanceCounter ramCounter;
         PerformanceCounter hddCounter;
+        #endregion
 
+        /// <summary>
+        /// Start here
+        /// </summary>
         public Form1()
         {
             InitializeComponent();
@@ -23,20 +29,41 @@ namespace Buildo
         }
 
         #region Methods
+
+        /// <summary>
+        /// logs to listbox
+        /// </summary>
+        /// <param name="v">Item to log</param>
         private void log(string v)
         {
             DateTime now = DateTime.Now;
             logListBox.Items.Add(now.ToString("F") + ": " + v);
         }
+
+        /// <summary>
+        /// General Place for all items that need to be updates if the UI does
+        /// </summary>
         private void updateIU()
         {
             lib.TimeZone tz = new lib.TimeZone();
+            LocalInfo li = new LocalInfo();
             DateTime now = DateTime.Now;
 
             currentTimeLabel.Text = now.ToString("F");
 
             timeZoneLabel.Text = tz.getTimeZone();
+
+            domainLabel.Text = li.getLocalWorkstationDomain();
+
+            currentUserLabel.Text = li.getCurrentUser();
+
+            computerNameLabel.Text = li.getMachineName();
         }
+        /// <summary>
+        /// background worker to get information about system resources
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void systemResourcesBackgroundWorker_DoWork(object sender, DoWorkEventArgs e)
         {
             cpuCounter = new PerformanceCounter();
@@ -75,21 +102,37 @@ namespace Buildo
                 Thread.Sleep(1000);
             }
         }
+
+        /// <summary>
+        /// Allows link in about to be clickable
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Rtb_LinkClicked(object sender, LinkClickedEventArgs e)
         {
             System.Diagnostics.Process.Start(e.LinkText);
         }
+
+        /// <summary>
+        /// Return to homepage
+        /// </summary>
         private void sethomepage()
         {
             removeColumnOneControls();
             updateIU();
             tableLayoutPanel1.Controls.Add(HomePanel, 1, 0);
-        }       
+        }
+        
         private void removeColumnOneControls()
         {
             var control = tableLayoutPanel1.GetControlFromPosition(1, 0);
             tableLayoutPanel1.Controls.Remove(control);
         }
+        
+        /// <summary>
+        /// Used for parsing through current computer utilization 
+        /// </summary>
+        /// <returns></returns>
         private Tuple<float, float, float> getCPUUtil()
         {
             float cpuUsage = cpuCounter.NextValue();
@@ -199,8 +242,9 @@ namespace Buildo
             log("Enable RDP: " + eRDP.Enable());
             buttonPanel.Enabled = true;
         }
+
         #endregion
 
-
+        
     }
 }

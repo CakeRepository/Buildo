@@ -2,11 +2,17 @@
 
 namespace Buildo.lib
 {
+    /// <summary>
+    /// Wrapper for UAC Related changes probably only one :) 
+    /// </summary>
     class UAC
     {
         private CMD CommandPrompt;
 
-
+        /// <summary>
+        /// Disable UAC through Command Prompt
+        /// </summary>
+        /// <returns>CMD Results</returns>
         public string removeUAC()
         {
             CommandPrompt = new CMD();

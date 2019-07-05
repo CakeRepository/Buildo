@@ -8,6 +8,11 @@ namespace Buildo.Resources
 {
     class CMD
     {
+        /// <summary>
+        /// Runs command passed through command param to commandprompt
+        /// </summary>
+        /// <param name="command"></param>
+        /// <returns>CMD Results</returns>
         public string RunCMD(string command)
         {
             try

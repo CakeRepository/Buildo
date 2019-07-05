@@ -9,3 +9,31 @@ c:\users\takes\documents\visual studio 2017\Projects\Buildo\Buildo\obj\Debug\Bui
 C:\Users\takes\documents\visual studio 2017\Projects\Buildo\Buildo\bin\Debug\EntityFramework.dll
 C:\Users\takes\documents\visual studio 2017\Projects\Buildo\Buildo\bin\Debug\EntityFramework.xml
 C:\Users\takes\documents\visual studio 2017\Projects\Buildo\Buildo\obj\Debug\Buildo.csprojResolveAssemblyReference.cache
+C:\Users\Owner\Source\Repos\Buildo\Buildo\bin\Debug\Buildo.exe.config
+C:\Users\Owner\Source\Repos\Buildo\Buildo\bin\Debug\Buildo.exe
+C:\Users\Owner\Source\Repos\Buildo\Buildo\bin\Debug\Buildo.pdb
+C:\Users\Owner\Source\Repos\Buildo\Buildo\bin\Debug\EntityFramework.dll
+C:\Users\Owner\Source\Repos\Buildo\Buildo\bin\Debug\NDesk.Options.dll
+C:\Users\Owner\Source\Repos\Buildo\Buildo\bin\Debug\EntityFramework.xml
+C:\Users\Owner\Source\Repos\Buildo\Buildo\obj\Debug\Buildo.csprojAssemblyReference.cache
+C:\Users\Owner\Source\Repos\Buildo\Buildo\obj\Debug\Buildo.Form1.resources
+C:\Users\Owner\Source\Repos\Buildo\Buildo\obj\Debug\Buildo.Properties.Resources.resources
+C:\Users\Owner\Source\Repos\Buildo\Buildo\obj\Debug\Buildo.csproj.GenerateResource.cache
+C:\Users\Owner\Source\Repos\Buildo\Buildo\obj\Debug\Buildo.csproj.CoreCompileInputs.cache
+C:\Users\Owner\Source\Repos\Buildo\Buildo\obj\Debug\Buildo.csproj.CopyComplete
+C:\Users\Owner\Source\Repos\Buildo\Buildo\obj\Debug\Buildo.exe
+C:\Users\Owner\Source\Repos\Buildo\Buildo\obj\Debug\Buildo.pdb
+C:\Users\takes\Source\Repos\Buildo\Buildo\bin\Debug\Buildo.exe.config
+C:\Users\takes\Source\Repos\Buildo\Buildo\bin\Debug\Buildo.exe
+C:\Users\takes\Source\Repos\Buildo\Buildo\bin\Debug\Buildo.pdb
+C:\Users\takes\Source\Repos\Buildo\Buildo\bin\Debug\EntityFramework.dll
+C:\Users\takes\Source\Repos\Buildo\Buildo\bin\Debug\NDesk.Options.dll
+C:\Users\takes\Source\Repos\Buildo\Buildo\bin\Debug\EntityFramework.xml
+C:\Users\takes\Source\Repos\Buildo\Buildo\obj\Debug\Buildo.csprojAssemblyReference.cache
+C:\Users\takes\Source\Repos\Buildo\Buildo\obj\Debug\Buildo.Form1.resources
+C:\Users\takes\Source\Repos\Buildo\Buildo\obj\Debug\Buildo.Properties.Resources.resources
+C:\Users\takes\Source\Repos\Buildo\Buildo\obj\Debug\Buildo.csproj.GenerateResource.cache
+C:\Users\takes\Source\Repos\Buildo\Buildo\obj\Debug\Buildo.csproj.CoreCompileInputs.cache
+C:\Users\takes\Source\Repos\Buildo\Buildo\obj\Debug\Buildo.csproj.CopyComplete
+C:\Users\takes\Source\Repos\Buildo\Buildo\obj\Debug\Buildo.exe
+C:\Users\takes\Source\Repos\Buildo\Buildo\obj\Debug\Buildo.pdb

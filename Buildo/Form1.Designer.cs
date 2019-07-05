@@ -41,6 +41,10 @@
             this.firewallButton = new System.Windows.Forms.Button();
             this.powerSettingsButton = new System.Windows.Forms.Button();
             this.HomePanel = new System.Windows.Forms.Panel();
+            this.currentUserLabel = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.domainLabel = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.logListBox = new System.Windows.Forms.ListBox();
             this.currentTimeLabel = new System.Windows.Forms.Label();
             this.timeZoneComboBox = new System.Windows.Forms.ComboBox();
@@ -56,6 +60,8 @@
             this.hardDriveProgressBar = new System.Windows.Forms.ProgressBar();
             this.ramProgressBar = new System.Windows.Forms.ProgressBar();
             this.systemResourcesBackgroundWorker = new System.ComponentModel.BackgroundWorker();
+            this.computerNameLabel = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             this.buttonPanel.SuspendLayout();
             this.HomePanel.SuspendLayout();
@@ -74,7 +80,7 @@
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 91.60448F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(735, 536);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(736, 543);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // buttonPanel
@@ -91,7 +97,7 @@
             this.buttonPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.buttonPanel.Location = new System.Drawing.Point(3, 3);
             this.buttonPanel.Name = "buttonPanel";
-            this.buttonPanel.Size = new System.Drawing.Size(115, 530);
+            this.buttonPanel.Size = new System.Drawing.Size(115, 537);
             this.buttonPanel.TabIndex = 2;
             // 
             // automateButton
@@ -119,7 +125,7 @@
             // HomeButton
             // 
             this.HomeButton.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.HomeButton.Location = new System.Drawing.Point(0, 440);
+            this.HomeButton.Location = new System.Drawing.Point(0, 447);
             this.HomeButton.Name = "HomeButton";
             this.HomeButton.Size = new System.Drawing.Size(115, 45);
             this.HomeButton.TabIndex = 7;
@@ -152,7 +158,7 @@
             // AboutButton
             // 
             this.AboutButton.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.AboutButton.Location = new System.Drawing.Point(0, 485);
+            this.AboutButton.Location = new System.Drawing.Point(0, 492);
             this.AboutButton.Name = "AboutButton";
             this.AboutButton.Size = new System.Drawing.Size(115, 45);
             this.AboutButton.TabIndex = 4;
@@ -196,6 +202,12 @@
             // HomePanel
             // 
             this.HomePanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.HomePanel.Controls.Add(this.computerNameLabel);
+            this.HomePanel.Controls.Add(this.label8);
+            this.HomePanel.Controls.Add(this.currentUserLabel);
+            this.HomePanel.Controls.Add(this.label7);
+            this.HomePanel.Controls.Add(this.domainLabel);
+            this.HomePanel.Controls.Add(this.label5);
             this.HomePanel.Controls.Add(this.logListBox);
             this.HomePanel.Controls.Add(this.currentTimeLabel);
             this.HomePanel.Controls.Add(this.timeZoneComboBox);
@@ -207,8 +219,44 @@
             this.HomePanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.HomePanel.Location = new System.Drawing.Point(124, 3);
             this.HomePanel.Name = "HomePanel";
-            this.HomePanel.Size = new System.Drawing.Size(608, 530);
+            this.HomePanel.Size = new System.Drawing.Size(609, 537);
             this.HomePanel.TabIndex = 3;
+            // 
+            // currentUserLabel
+            // 
+            this.currentUserLabel.AutoSize = true;
+            this.currentUserLabel.Location = new System.Drawing.Point(426, 32);
+            this.currentUserLabel.Name = "currentUserLabel";
+            this.currentUserLabel.Size = new System.Drawing.Size(88, 13);
+            this.currentUserLabel.TabIndex = 14;
+            this.currentUserLabel.Text = "currentUserLabel";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(351, 32);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(69, 13);
+            this.label7.TabIndex = 13;
+            this.label7.Text = "Current User:";
+            // 
+            // domainLabel
+            // 
+            this.domainLabel.AutoSize = true;
+            this.domainLabel.Location = new System.Drawing.Point(426, 10);
+            this.domainLabel.Name = "domainLabel";
+            this.domainLabel.Size = new System.Drawing.Size(67, 13);
+            this.domainLabel.TabIndex = 12;
+            this.domainLabel.Text = "domainLabel";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(374, 10);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(46, 13);
+            this.label5.TabIndex = 11;
+            this.label5.Text = "Domain:";
             // 
             // logListBox
             // 
@@ -287,9 +335,9 @@
             this.UtilizationPanel.Controls.Add(this.hardDriveProgressBar);
             this.UtilizationPanel.Controls.Add(this.ramProgressBar);
             this.UtilizationPanel.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.UtilizationPanel.Location = new System.Drawing.Point(0, 334);
+            this.UtilizationPanel.Location = new System.Drawing.Point(0, 341);
             this.UtilizationPanel.Name = "UtilizationPanel";
-            this.UtilizationPanel.Size = new System.Drawing.Size(608, 196);
+            this.UtilizationPanel.Size = new System.Drawing.Size(609, 196);
             this.UtilizationPanel.TabIndex = 3;
             // 
             // label3
@@ -347,13 +395,32 @@
             // 
             this.systemResourcesBackgroundWorker.DoWork += new System.ComponentModel.DoWorkEventHandler(this.systemResourcesBackgroundWorker_DoWork);
             // 
+            // computerNameLabel
+            // 
+            this.computerNameLabel.AutoSize = true;
+            this.computerNameLabel.Location = new System.Drawing.Point(426, 58);
+            this.computerNameLabel.Name = "computerNameLabel";
+            this.computerNameLabel.Size = new System.Drawing.Size(105, 13);
+            this.computerNameLabel.TabIndex = 16;
+            this.computerNameLabel.Text = "computerNameLabel";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(337, 58);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(86, 13);
+            this.label8.TabIndex = 15;
+            this.label8.Text = "Computer Name:";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(735, 536);
+            this.ClientSize = new System.Drawing.Size(736, 543);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MinimumSize = new System.Drawing.Size(752, 582);
             this.Name = "Form1";
             this.Text = "Buildo";
             this.tableLayoutPanel1.ResumeLayout(false);
@@ -395,6 +462,12 @@
         private System.Windows.Forms.Label currentTimeLabel;
         private System.Windows.Forms.Button automateButton;
         private System.Windows.Forms.ListBox logListBox;
+        private System.Windows.Forms.Label domainLabel;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label currentUserLabel;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label computerNameLabel;
+        private System.Windows.Forms.Label label8;
     }
 }
 
