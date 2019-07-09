@@ -41,6 +41,8 @@
             this.firewallButton = new System.Windows.Forms.Button();
             this.powerSettingsButton = new System.Windows.Forms.Button();
             this.HomePanel = new System.Windows.Forms.Panel();
+            this.computerNameLabel = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
             this.currentUserLabel = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.domainLabel = new System.Windows.Forms.Label();
@@ -60,8 +62,7 @@
             this.hardDriveProgressBar = new System.Windows.Forms.ProgressBar();
             this.ramProgressBar = new System.Windows.Forms.ProgressBar();
             this.systemResourcesBackgroundWorker = new System.ComponentModel.BackgroundWorker();
-            this.computerNameLabel = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
+            this.uninstallProgramsButton = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.buttonPanel.SuspendLayout();
             this.HomePanel.SuspendLayout();
@@ -85,6 +86,7 @@
             // 
             // buttonPanel
             // 
+            this.buttonPanel.Controls.Add(this.uninstallProgramsButton);
             this.buttonPanel.Controls.Add(this.automateButton);
             this.buttonPanel.Controls.Add(this.enableRDP);
             this.buttonPanel.Controls.Add(this.HomeButton);
@@ -221,6 +223,24 @@
             this.HomePanel.Name = "HomePanel";
             this.HomePanel.Size = new System.Drawing.Size(609, 537);
             this.HomePanel.TabIndex = 3;
+            // 
+            // computerNameLabel
+            // 
+            this.computerNameLabel.AutoSize = true;
+            this.computerNameLabel.Location = new System.Drawing.Point(426, 58);
+            this.computerNameLabel.Name = "computerNameLabel";
+            this.computerNameLabel.Size = new System.Drawing.Size(105, 13);
+            this.computerNameLabel.TabIndex = 16;
+            this.computerNameLabel.Text = "computerNameLabel";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(337, 58);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(86, 13);
+            this.label8.TabIndex = 15;
+            this.label8.Text = "Computer Name:";
             // 
             // currentUserLabel
             // 
@@ -395,23 +415,16 @@
             // 
             this.systemResourcesBackgroundWorker.DoWork += new System.ComponentModel.DoWorkEventHandler(this.systemResourcesBackgroundWorker_DoWork);
             // 
-            // computerNameLabel
+            // uninstallProgramsButton
             // 
-            this.computerNameLabel.AutoSize = true;
-            this.computerNameLabel.Location = new System.Drawing.Point(426, 58);
-            this.computerNameLabel.Name = "computerNameLabel";
-            this.computerNameLabel.Size = new System.Drawing.Size(105, 13);
-            this.computerNameLabel.TabIndex = 16;
-            this.computerNameLabel.Text = "computerNameLabel";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(337, 58);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(86, 13);
-            this.label8.TabIndex = 15;
-            this.label8.Text = "Computer Name:";
+            this.uninstallProgramsButton.Dock = System.Windows.Forms.DockStyle.Top;
+            this.uninstallProgramsButton.Location = new System.Drawing.Point(0, 315);
+            this.uninstallProgramsButton.Name = "uninstallProgramsButton";
+            this.uninstallProgramsButton.Size = new System.Drawing.Size(115, 45);
+            this.uninstallProgramsButton.TabIndex = 10;
+            this.uninstallProgramsButton.Text = "Uninstall Programs";
+            this.uninstallProgramsButton.UseVisualStyleBackColor = true;
+            this.uninstallProgramsButton.Click += new System.EventHandler(this.UninstallProgramsButton_Click);
             // 
             // Form1
             // 
@@ -468,6 +481,7 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label computerNameLabel;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Button uninstallProgramsButton;
     }
 }
 

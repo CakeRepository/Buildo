@@ -37,3 +37,4 @@ C:\Users\takes\Source\Repos\Buildo\Buildo\obj\Debug\Buildo.csproj.CoreCompileInp
 C:\Users\takes\Source\Repos\Buildo\Buildo\obj\Debug\Buildo.csproj.CopyComplete
 C:\Users\takes\Source\Repos\Buildo\Buildo\obj\Debug\Buildo.exe
 C:\Users\takes\Source\Repos\Buildo\Buildo\obj\Debug\Buildo.pdb
+C:\Users\takes\source\repos\Buildo\Buildo\obj\Debug\Buildo.form.uninstallPrograms.resources

@@ -6,6 +6,7 @@ using Microsoft.VisualBasic.Devices;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Buildo.form;
 
 namespace Buildo
 {
@@ -243,8 +244,13 @@ namespace Buildo
             buttonPanel.Enabled = true;
         }
 
+
         #endregion
 
-        
+        private void UninstallProgramsButton_Click(object sender, EventArgs e)
+        {
+            Form up = new uninstallPrograms();
+            up.Show();
+        }
     }
 }

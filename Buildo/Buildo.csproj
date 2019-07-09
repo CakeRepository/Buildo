@@ -98,6 +98,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="form\uninstallPrograms.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\uninstallPrograms.Designer.cs">
+      <DependentUpon>uninstallPrograms.cs</DependentUpon>
+    </Compile>
     <Compile Include="lib\Choco.cs" />
     <Compile Include="lib\LocalInfo.cs" />
     <Compile Include="lib\EnableRDP.cs" />
@@ -107,6 +113,7 @@
     <Compile Include="lib\Silent.cs" />
     <Compile Include="lib\TimeZone.cs" />
     <Compile Include="lib\UAC.cs" />
+    <Compile Include="lib\UninstallProgram.cs" />
     <Compile Include="lib\WindowsUpdate.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -114,6 +121,9 @@
     <Compile Include="Resources\PowerShell.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form\uninstallPrograms.resx">
+      <DependentUpon>uninstallPrograms.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
